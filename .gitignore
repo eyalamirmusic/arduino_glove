@@ -1,6 +1,5 @@
 *.user
 
-build
 build-ios
 
 cmake-build-debug
