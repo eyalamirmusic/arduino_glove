@@ -11,6 +11,9 @@ struct MidiProcessor
     {
         DBG ("called");
 
+        int mapped = juce::jmap(30, 0, 100, 0, 127);
+        int limited = juce::jlimit(0, 100, 30);
+
         MidiMessages messages;
 
         const auto channel = 1;

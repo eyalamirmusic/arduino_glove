@@ -1,7 +1,5 @@
 *.user
 
-SDKs
-
 build
 build-ios
 
