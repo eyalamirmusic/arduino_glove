@@ -15,8 +15,8 @@ juce_add_plugin("${BaseTargetName}"
         COPY_PLUGIN_AFTER_BUILD TRUE
         PLUGIN_MANUFACTURER_CODE Juce
         PLUGIN_CODE MIpl
-        FORMATS AU VST3 Standalone
-        PRODUCT_NAME "Minimal Plugin Template")
+        FORMATS Standalone
+        PRODUCT_NAME "Arduino To MIDI")
 
 target_sources(${BaseTargetName} PRIVATE
         Source/PluginProcessor.cpp)
@@ -30,6 +30,7 @@ target_compile_definitions(${BaseTargetName}
 target_link_libraries(${BaseTargetName} PRIVATE
         shared_plugin_helpers
         juce_audio_utils
+        juce_serialport
         juce_recommended_config_flags
         juce_recommended_lto_flags
         juce_recommended_warning_flags)
