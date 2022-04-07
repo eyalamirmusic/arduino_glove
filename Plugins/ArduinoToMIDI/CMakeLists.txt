@@ -1,6 +1,6 @@
-project(MinimalPluginTemplate VERSION 0.0.1)
+project(ArduinoToMIDI VERSION 0.0.1)
 
-set (BaseTargetName MinimalPluginTemplate)
+set (BaseTargetName ArduinoToMIDI)
 
 juce_add_plugin("${BaseTargetName}"
         # VERSION ...                               # Set this if the plugin version is different to the project version
@@ -9,7 +9,7 @@ juce_add_plugin("${BaseTargetName}"
         COMPANY_NAME "MyCompany"
         IS_SYNTH FALSE
         NEEDS_MIDI_INPUT TRUE
-        NEEDS_MIDI_OUTPUT FALSE
+        NEEDS_MIDI_OUTPUT TRUE
         IS_MIDI_EFFECT FALSE
         EDITOR_WANTS_KEYBOARD_FOCUS FALSE
         COPY_PLUGIN_AFTER_BUILD TRUE
@@ -32,5 +32,4 @@ target_link_libraries(${BaseTargetName} PRIVATE
         juce_audio_utils
         juce_serialport
         juce_recommended_config_flags
-        juce_recommended_lto_flags
-        juce_recommended_warning_flags)
+        juce_recommended_lto_flags)
